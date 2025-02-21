@@ -3,8 +3,6 @@ import "frida-il2cpp-bridge"
 
 Il2Cpp.perform(() => {
     console.log("🔍 Modifying Time.timeScale for game speed hack...");
-
-    // ✅ 获取 Time 类
     const timeClass = Il2Cpp.domain.assembly("UnityEngine.CoreModule").image.classes.find(cls => cls.name === "Time");
 
     if (!timeClass) {
