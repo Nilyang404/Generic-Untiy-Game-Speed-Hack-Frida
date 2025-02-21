@@ -1,0 +1,13 @@
+{
+    "main": "index.ts",
+    "scripts": {
+        "prepare": "npm run build",
+        "loop": "frida-compile index.ts -w -o frida.js"
+    },
+    "dependencies": {
+        "frida-il2cpp-bridge": "^0.8.8"
+    },
+    "devDependencies": {
+        "@types/frida-gum": "^18.7.2"
+    }
+}
